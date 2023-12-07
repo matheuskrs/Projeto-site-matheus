@@ -1,0 +1,28 @@
+body{
+    min-height:100vh;
+    background:linear-gradient(217deg, green,lightgreen);
+}
+
+.navbar{
+    margin-bottom:5rem;
+}
+
+#game{
+    background-color:rgb(31, 31, 31);
+    width:fit-content;
+    color:white;
+    border: black solid 5px;
+    border-radius:5px;
+}
+
+.btn{
+    padding:1rem;
+    font-size:2rem;
+    width:50%;
+    border: solid 3px transparent;
+    border-radius:10px;
+}
+.btn:hover{
+    border:solid 3px white;
+    border-radius:10px;
+}
