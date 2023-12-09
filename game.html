@@ -39,15 +39,16 @@
 
 	<div id = "game" class="container-fluid">
 			<div class="card text-center" style="width: 18rem;">
-                <img src="img/misterio.jpg" class="card-img-top" alt="...">
+				<button type="button" id = "record" class="btn btn-primary " disabled>Recorde:</button>
+				<button type="button" id = "rounds" class="btn btn-primary rounded-0" disabled> </button>
+				<div class="gameImg" id = "gameimage">
+					
+				</div>
                 <div class="card-body">
                   <h5 class="card-title">?</h5>
                   <p class="card-text"></p>
-                  <select class="form-select" id = "studentsList" aria-label="Default select example">
-                    <option selected value = "99">Quem você chuta?</option>
-                    <option value="0">Matheus</option>
-                    <option value="1">Adilson</option>
-                    <option value="2">Gallo</option>
+                  <select class="form-select" id = "studentsList" >
+                    <option selected disabled value = "99">Quem você chuta?</option>
                   </select>
                 </div>
                 <div class="flex-wrap">

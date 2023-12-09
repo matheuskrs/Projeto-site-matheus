@@ -1,8 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Quicksand:wght@600&display=swap');
+
+*{
+    font-family: 'Nova Square', sans-serif;
+    user-select:none;
+}
+
 body{
     min-height:100vh;
     background:linear-gradient(217deg,rgb(255, 57, 57), rgb(54, 171, 255));
 }
-
+h1{
+    cursor:default;
+}
 .navbar{
     margin-bottom:5rem;
 }
@@ -21,7 +31,7 @@ body{
 }
 
 a.btn{
-    margin-bottom:5rem;
+    margin-top:1rem;
 }
 
 .btn{
