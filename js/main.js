@@ -19,12 +19,12 @@ let alunos = [
     {nome:"Lohany", dica1:"Sabe falar inglês.", dica2:"É introvertida.", dica3:"É muito boa em pintar.", sexo:"f"},
     {nome:"Marcos", dica1:"Gosta de máquinas, computadores.", dica2:"Entende MUITO sobre tecnologia.", dica3:"É um professor.", sexo:"m"},
     {nome:"Maria", dica1:"Gosta de chá.", dica2:"É bem honesta quando precisa falar.", dica3:"Não tem vergonha, mas tem sono." ,sexo:"f"},
-    {nome:"Matheus", dica1: "Gosta de programar.", dica2: "Já chorou na sala.", dica3: "Fez uma apresentação em inglês.", sexo: "m"},
+    {nome:"Matheus", dica1: "Gosta de programar.", dica2: "Tem bigode.", dica3: "Fez uma apresentação em inglês.", sexo: "m"},
     {nome:"Pedro" ,dica1:"É jogador.", dica2:"Tem um caderno de anotações.", dica3:"Possui sua própria marca." ,sexo:"m"},
     {nome:"Rafaella" ,dica1:"Já foi em um show.", dica2:"Tem muito conhecimento em história.", dica3:"Já dirige." ,sexo:"f"},
     {nome:"Sofia", dica1:"Tem pouco tempo livre.", dica2:"Fez a prova da UNESP recentemente." ,dica3:"Quer ser psicóloga." ,sexo:"f"},
     {nome:"Vera", dica1:"Adora motivacionar as pessoas.", dica2:"É uma pessoa muito calma.", dica3:"Acredita muito em crenças.", sexo:"f"},
-    {nome:"Vitória", dica1:" ", dica2:"Tem o cabelo ruivo.", dica3:"Quer ser médica." ,sexo:"f"},
+    {nome:"Vitória", dica1:"Gosta de fazer piadas sarcásticas.", dica2:"Tem o cabelo ruivo.", dica3:"Quer ser médica." ,sexo:"f"},
     {nome:"Wellis", dica1:"Gosta de organização.", dica2:"Gosta de programar.", dica3:"Faz faculdade.", sexo:"m"},
     {nome:"Yan", dica1:"É uma pessoa muito gentil.", dica2:"É muito bom em desenhar.", dica3:"Cumprimenta todos assim que chega no curso.", sexo:"m"}
 ];
