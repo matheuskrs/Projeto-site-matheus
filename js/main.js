@@ -78,8 +78,8 @@ let tituloCarta = document.getElementById('tituloCarta')
 let ultimoClicado
 let permitirClicar = true
 function revealLetter(index){
-    if((index != ultimoClicado && permitirClicar == true)){
-        if(lettersRevealed < Math.round((alunos[ranNum].nome.length+1)/3)){
+    if(index != ultimoClicado && permitirClicar == true){
+        if(lettersRevealed < Math.round((alunos[ranNum].nome.length+1)/5)){
             secretName.childNodes[index].innerText = alunos[ranNum].nome.charAt(index)
             lettersRevealed += 1
         }
@@ -91,10 +91,10 @@ function revealLetter(index){
             });
             permitirClicar = false
         }
-        let dicasSobrando = Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed);
+        let dicasSobrando = Math.round(((alunos[ranNum].nome.length+1)/5)-lettersRevealed);
 
         if(dicasSobrando > 0){
-            tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+            tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/5)-lettersRevealed)
         }
         else{
             tituloCarta.innerText = "Suas dicas acabaram."
@@ -102,7 +102,7 @@ function revealLetter(index){
     }
     ultimoClicado = index;
 }
-    tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+    tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/5)-lettersRevealed)
     
     
     function checkValue(){
@@ -145,13 +145,12 @@ function revealLetter(index){
         rodadasAtuais.innerHTML = "Rodada atual: " + (rodadasGanhas+1);
     }
 
-
     if(userChoice < 99){
         lettersRevealed = 0;
         ultimoClicado = 99;
         ranNum = (Math.floor(Math.random()*alunos.length));
         permitirClicar = true
-        tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+        tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/5)-lettersRevealed)
         giveNameLines();
         if(alunos[ranNum].sexo == "f"){
             gameimage.innerHTML = `<img src="/img/misterioFeminino.jpeg" class="card-img-top" alt="pessoa misteriosa">`
