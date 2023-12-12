@@ -30,7 +30,7 @@ let alunos = [
 ];
 
 let list = document.getElementById('studentsList');
-
+list.innerHTML += `<option selected disabled value = "99">Quem você chuta?</option>`
 for(let i = 0; i < alunos.length; i++){
     list.innerHTML += `<option value="${[i]}">${alunos[i].nome}</option>`
 }
@@ -58,14 +58,58 @@ rodadasAtuais.innerHTML = "Rodada atual: " + (rodadasGanhas+1);
 let recordeDoUsuario = document.getElementById('record');
 recordeDoUsuario.innerHTML = "Recorde:" + recorde;
 
-console.log(alunos[ranNum].sexo)
+let secretName = document.getElementById('nomeSecreto')
 
-function checkValue(){
+function giveNameLines(){
+    secretName.innerHTML = "";
+    for(let i = 0; i < alunos[ranNum].nome.length; i++){
+        if(alunos[ranNum].nome.charAt(i) != " "){
+            secretName.innerHTML += `<button onclick = "revealLetter(${i})" class = "display-6 fs-3 text-center" id = "letrasSecretas"></button>`;
+        }
+        else{
+            secretName.innerHTML += " ";
+        }
+    }
+}
+giveNameLines()
 
-    let userChoice = document.getElementById('studentsList').value;
-    dicalida1 = false;
-    dicalida2 = false;
-    dicalida3 = false;
+let lettersRevealed = 0
+let tituloCarta = document.getElementById('tituloCarta')
+let ultimoClicado
+let permitirClicar = true
+function revealLetter(index){
+    if((index != ultimoClicado && permitirClicar == true)){
+        if(lettersRevealed < Math.round((alunos[ranNum].nome.length+1)/3)){
+            secretName.childNodes[index].innerText = alunos[ranNum].nome.charAt(index)
+            lettersRevealed += 1
+        }
+        else{
+            Swal.fire({
+                title: "Erro",
+                text: "O limite de dicas foi atingido!",
+                icon: "info"
+            });
+            permitirClicar = false
+        }
+        let dicasSobrando = Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed);
+
+        if(dicasSobrando > 0){
+            tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+        }
+        else{
+            tituloCarta.innerText = "Suas dicas acabaram."
+        }
+    }
+    ultimoClicado = index;
+}
+    tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+    
+    
+    function checkValue(){
+        let userChoice = document.getElementById('studentsList').value;
+        dicalida1 = false;
+        dicalida2 = false;
+        dicalida3 = false;
 
 
     if(userChoice == ranNum){
@@ -74,6 +118,7 @@ function checkValue(){
             text: "Você acertou!",
             icon: "success"
         });
+        
         rodadasGanhas++;
         rodadasAtuais.innerHTML = "Rodada atual: " + (rodadasGanhas+1);
         if (rodadasGanhas > recorde){
@@ -102,7 +147,12 @@ function checkValue(){
 
 
     if(userChoice < 99){
+        lettersRevealed = 0;
+        ultimoClicado = 99;
         ranNum = (Math.floor(Math.random()*alunos.length));
+        permitirClicar = true
+        tituloCarta.innerText = "Letras que podem ser reveladas: " + Math.round(((alunos[ranNum].nome.length+1)/3)-lettersRevealed)
+        giveNameLines();
         if(alunos[ranNum].sexo == "f"){
             gameimage.innerHTML = `<img src="/img/misterioFeminino.jpeg" class="card-img-top" alt="pessoa misteriosa">`
         }
@@ -113,7 +163,6 @@ function checkValue(){
         diquinha2 = alunos[ranNum].dica2;
         diquinha3 = alunos[ranNum].dica3;   
     }
-    console.log(ranNum)
 }
 
 

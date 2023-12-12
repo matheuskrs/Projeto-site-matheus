@@ -15,8 +15,8 @@
 	<header class = "bg-dark" data-bs-theme="dark">
 		<nav class="navbar navbar-expand-md">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html">
-					<img src="img/logo.png" alt="" width="170">
+				<a class="navbar-brand" href="#">
+					<img src="img/logo.png" alt="" width="400">
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -26,29 +26,32 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="index.html">Home</a>
+							<a class="nav-link fs-1" aria-current="page" href="index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Sobre</a>
+							<a class="nav-link fs-1" href="tutorial.html">Tutorial</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
+	
 
 	<div id = "game" class="container-fluid">
-			<div class="card text-center" style="width: 18rem;">
+			<div class="card text-center" style="width: 25rem;">
 				<button type="button" id = "record" class="btn btn-primary " disabled>Recorde:</button>
 				<button type="button" id = "rounds" class="btn btn-primary rounded-0" disabled> </button>
-				<div class="gameImg" id = "gameimage">
+				<div class="gameImg img-fluid" id = "gameimage">
 					
 				</div>
                 <div class="card-body">
-                  <h5 class="card-title">?</h5>
+					<div id="nomeSecreto">
+
+					</div>
+					<h5 class="card-title" id = "tituloCarta">?</h5>
                   <p class="card-text"></p>
                   <select class="form-select" id = "studentsList" >
-                    <option selected disabled value = "99">Quem você chuta?</option>
                   </select>
                 </div>
                 <div class="flex-wrap">
@@ -57,7 +60,7 @@
               </div>
 	</div>
 
-	<div class="container text-center" id = "dicas">
+	<div class="container-fluid text-center" id = "dicas">
 		<button onclick = "hint1()" type="button" class="btn btn-dark">Dica 1</button>
 		<button onclick = "hint2()" type="button" class="btn btn-dark">Dica 2</button>
 		<button onclick = "hint3()" type="button" class="btn btn-dark">Dica 3</button>
