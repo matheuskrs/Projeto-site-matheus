@@ -32,6 +32,7 @@ a.btn{
     background-color:rgb(31, 31, 31);
     width:fit-content;
     height:fit-content;
+    padding:0;
     color:white;
     border: black solid 5px;
     border-radius:5px;

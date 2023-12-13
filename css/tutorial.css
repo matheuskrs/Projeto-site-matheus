@@ -7,11 +7,10 @@
 
 body{
     max-height:100vh;
-    background-color:rgb(17, 17, 17);}
-
-a.btn{
-    margin-bottom:5px;
+    background-color:rgb(19, 19, 19);
 }
+
+
 
 .card{
     margin:1rem;
@@ -19,8 +18,9 @@ a.btn{
 }
 
 p,h5{
-    color: green;
-    background-color:black;
+    color: black;
+    background-color:gray;
+    
     width:fit-content;
     margin:0 auto;
     padding:5px;
@@ -34,11 +34,7 @@ h5{
 p{
     font-weight: bolder;
     font-size:1.5rem;
-    background-color:black;
     border-radius:25px;
 
     
 }
-
-
-
