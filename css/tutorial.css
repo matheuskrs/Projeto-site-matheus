@@ -6,15 +6,8 @@
 }
 
 body{
-    min-height:100vh;
-    background:linear-gradient(217deg,rgb(255, 57, 57), rgb(54, 171, 255));
-}
-
-.navbar{
-    margin-bottom:1.5rem;
-}
-
-
+    max-height:100vh;
+    background-color:rgb(17, 17, 17);}
 
 a.btn{
     margin-bottom:5px;
@@ -25,12 +18,26 @@ a.btn{
     background-color: white;
 }
 
-#game{
-    background-color:rgb(31, 31, 31);
+p,h5{
+    color: green;
+    background-color:black;
     width:fit-content;
-    color:white;
-    border: black solid 5px;
-    border-radius:5px;
+    margin:0 auto;
+    padding:5px;
+}
+h5{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom:0;
+}
+
+p{
+    font-weight: bolder;
+    font-size:1.5rem;
+    background-color:black;
+    border-radius:25px;
+
+    
 }
 
 
